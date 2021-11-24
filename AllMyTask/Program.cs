@@ -91,11 +91,13 @@ else
 }*/
 
 //7. Показать числа от -N до N
+// 1-ый способ.
 /* int N = 5;
 for (int i = -N; i <= N; i++)
-{
+    {
     Console.WriteLine(i);
-} */
+    } */
+// 2-ой способ.
 /* void MinusPlus(int number)
 {   
     for (int i = -number; i <=number; i++)
@@ -105,50 +107,90 @@ for (int i = -N; i <= N; i++)
 }
 MinusPlus(5); */
 
-//это еще что за задача??
 //8. Показать четные числа от 1 до N
-/* int N = 26;
+
+// 1-ый способ.
+/* int N = 5;
 for (int i = 1; i <= N; i++)
+    { 
+    if (i % 2 == 0) Console.WriteLine(i);
+    }  */
+// 2-ой способ.
+
+/* void EvenNumber (int N)
 {
-    if (i % 17 == 0) //if (i % 17 != 0) - 
-    Console.WriteLine(i);
-} */
+    for (int i = 1; i <= N; i++)
+    { 
+    if (i % 2 == 0) Console.WriteLine(i);
+    } 
+}
+EvenNumber(20); */
 
 //9. Показать последнюю цифру трёхзначного числа
+// можно также сделать через едсятки - я пока не думала как
+
+// 1-ый способ
  /*int number= 213;
  string text = Convert.ToString(number);
  Console.WriteLine (text[2]);*/
 
+ // 2-ой способ.
+ /* void LastNumber (int number)
+    {
+    string text = Convert.ToString(number);
+    Console.WriteLine (text[2]);
+    }
+ LastNumber(247); */
+
 //10. Показать вторую цифру трёхзначного числа
-/*
-int number= 212;
+
+// 1-ый способ
+/*int number= 212;
  string text = Convert.ToString(number);
  Console.WriteLine (text[1]);*/
 
-//11. Показать вторую цифру трёхзначного числа
-//Сперва показать десятки. 
-
-//12. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
-//Алгоритм:
-/* int x = 10;
-int y = 99;
-int z = new Random().Next(x,y+1);
-System.Console.WriteLine($"Число из отрезка {z}");
-int PrintNumber(int z)
-{
-    int n = z/10;
-    int m = z%10;
-    if (n>m) 
+ // 2-ой способ
+/* void LastNumber (int number)
     {
-        return n;
+    string text = Convert.ToString(number);
+    Console.WriteLine (text[1]);
     }
-    else
+ LastNumber(213); */
+
+//11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+/* void Method1 (int min, int max)
+{
+    int[] arr = {min, max+1};
+    for (int i = 0; i <= arr.Length; i++)
     {
-        return m;
+     System.Console.WriteLine($"{arr}");  
     }
 }
+/* int PrintNumber(int z)
+    {
+    int n = z/10;
+    int m = z%10;
+        if (n>m) return n;
+        else return m;
+    }  
+
+Method1(10,99); */
+
+
+
+/* int x = 10;
+int y = 99;
+int z = new Random().Next(x, y+1);
+System.Console.WriteLine($"Число из отрезка {z}");
+int PrintNumber(int z)
+    {
+    int n = z/10;
+    int m = z%10;
+        if (n>m) return n;
+        else return m;
+    } 
 System.Console.Write("Наибольшая цифра числа = ");
-Console.WriteLine(PrintNumber(z)); */
+Console.WriteLine(PrintNumber(z));*/
 
 //13. Удалить вторую цифру трёхзначного числа
 /* int number = 423;
@@ -160,6 +202,27 @@ int DelNum(int number)
         return result;
     }
 System.Console.Write(DelNum(number)); */
+//код от панды 
+/* int[] arr = new int[10];
+int count = 0;
+for (int i =0;i <arr.Length;i++)
+{
+    arr[i]=Convert.ToInt32(Console.ReadLine());
+
+}
+for (int i =0;i <arr.Length;i++)
+{
+    if (arr[i] > 0)
+    {
+        count++;
+    }
+}
+Console.WriteLine(count); */
+/* //сплит делит строку на маленькие строки по пробелам
+string numbers = Console.ReadLine();
+string[] num = numbers.Split(' ');
+// затем сконвертировать из строки в число и сравнить положительные, отрицательные, нулевые задачи */
+
 
 //14.Выяснить, кратно ли число заданному, если нет, вывести остаток. 
 //доделать задачу, здесь 2 варианта, первый - доработать
