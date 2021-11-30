@@ -286,15 +286,33 @@ System.Console.WriteLine(Method1(a, b));*/
   } */
 
 //15.Найти третью цифру числа или сообщить, что её нет*
-/* int i = 1254;
-if (i > 100 &&
-    {
-}
-else
-{
-} */
 
- 
+/* int LastNumber (int i)
+    {
+    int n = i %1000;
+    int m = i%100;
+    int g = (n - m)/100;
+    return g;
+    }
+ System.Console.WriteLine(LastNumber(2345)); */
+
+ //16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным
+string Days (int day)
+{   
+    string DayOfWeek = string.Empty;
+    string nullResult = "Введи число от 1 до 7, чтобы узнать, является ли оно выходным днём";
+    if (day == 1) DayOfWeek = $"Вы ввели число {day} - это понедельник. Это не выходной день"; 
+    if (day == 2) DayOfWeek =  $"Вы ввели число {day} - это вторник. Это не выходной день"; 
+    if (day == 3) DayOfWeek =  $"Вы ввели число {day} - это среда. Это не выходной день"; 
+    if (day == 4) DayOfWeek =  $"Вы ввели число {day} - это четверг. Это не выходной день"; 
+    if (day == 5) DayOfWeek =  $"Вы ввели число {day} - это пятница. Это не выходной день"; 
+    if (day == 6) DayOfWeek =  $"Вы ввели число {day} - это суббота. Это выходной день"; 
+    if (day == 7) DayOfWeek =  $"Вы ввели число {day} - это воскресенье. Это выходной день"; 
+    if (day < 1 || day > 7) return nullResult;
+    return DayOfWeek;
+}
+System.Console.WriteLine(Days(6));
+
 //24. Найти кубы чисел от 1 до N
 
 // здесь показано решение только поиска кубов в кратком варианте
