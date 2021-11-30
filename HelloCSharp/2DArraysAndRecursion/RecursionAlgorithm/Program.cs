@@ -128,7 +128,7 @@ Console.Clear();
 PrintPicture(picture);
 FillPicture(13, 13);
 PrintPicture(picture); */
-Console.Clear();
+/* Console.Clear();
 System.Console.WriteLine("Факториал");
 // Здесь указан тип double, так как значения в рекурсии большие и просто возникает переполнение, если указывать тип int
 double Factorial(int N)
@@ -136,9 +136,23 @@ double Factorial(int N)
     if (N == 1) return 1;
     else return N * Factorial (N - 1);
 }
+//System.Console.WriteLine(Factorial(7));
 // Посчитать по порядку факториал числа от 1 до заданного N (здесь он равен 40)
 for (int i = 1; i < 40; i++)
 {
     System.Console.WriteLine($"{i}! = {Factorial(i)}");
+} */
+/* Console.Clear();
+System.Console.WriteLine("Числа Фибоначчи");
+//f(1)=1
+//f(2)=1
+// f(n) = f(n-1)+f(n-2)
+double Fibonacci (int N)
+{
+    if (N==1||N==2) return 1;   
+    else return Fibonacci (N-1) + Fibonacci (N-2);
 }
-//System.Console.WriteLine(Factorial(7));
+for (int i = 1; i < 100; i++)
+{
+    System.Console.WriteLine($"{i} = {Fibonacci(i)}");
+} */
