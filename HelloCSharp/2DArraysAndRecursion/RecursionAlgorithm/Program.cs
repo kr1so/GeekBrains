@@ -26,7 +26,9 @@ for (int rows = 0; rows < 3; rows++)
 } */
 
 //Ввод нового функционала.
-/* int[,] matrix = new int[3, 4];
+/* 
+Console.Clear();
+int[,] matrix = new int[3, 4];
 for (int rows = 0; rows < matrix.GetLength(0); rows++)
 {
     for (int columns = 0; columns < matrix.GetLength(1); columns++)
@@ -66,7 +68,7 @@ FillArray(matrix);
 PrintArray(matrix); */
 
 // Закрашивание изображения. 
-void PrintPicture(int[,] array)
+/* void PrintPicture(int[,] array)
 {
     for (int i = 0; i < array.GetLength(0); i++)
     {
@@ -122,6 +124,21 @@ void FillPicture(int row, int col)
         FillPicture(row, col + 1);
     }
 }
+Console.Clear();
 PrintPicture(picture);
 FillPicture(13, 13);
-PrintPicture(picture);
+PrintPicture(picture); */
+Console.Clear();
+System.Console.WriteLine("Факториал");
+// Здесь указан тип double, так как значения в рекурсии большие и просто возникает переполнение, если указывать тип int
+double Factorial(int N)
+{
+    if (N == 1) return 1;
+    else return N * Factorial (N - 1);
+}
+// Посчитать по порядку факториал числа от 1 до заданного N (здесь он равен 40)
+for (int i = 1; i < 40; i++)
+{
+    System.Console.WriteLine($"{i}! = {Factorial(i)}");
+}
+//System.Console.WriteLine(Factorial(7));
