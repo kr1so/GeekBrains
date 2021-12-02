@@ -92,20 +92,20 @@ else
 
 //7. Показать числа от -N до N
 // 1-ый способ.
-/* int N = 5;
+/*  int N = 5;
 for (int i = -N; i <= N; i++)
     {
     Console.WriteLine(i);
-    } */
+    }  */
 // 2-ой способ.
-/* void MinusPlus(int number)
+/*  void MinusPlus(int number)
 {   
     for (int i = -number; i <=number; i++)
     {
         Console.WriteLine(i);
     }
 }
-MinusPlus(5); */
+MinusPlus(5);  */
 
 //8. Показать четные числа от 1 до N
 
@@ -393,7 +393,7 @@ for (int i = 0; i <= 1; i++)
     }
 }
 System.Console.WriteLine(res); */
-19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
+//19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 
 //24. Найти кубы чисел от 1 до N
 
@@ -432,3 +432,15 @@ System.Console.WriteLine(summary); */
 System.Console.WriteLine(Sum(3));
  */
 //26. Возведите число А в натуральную степень B используя цикл
+
+//27. Определить количество цифр в числе
+
+
+/* //66. Показать натуральные числа от 1 до N, N задано
+
+int NaturalNumbers(int N)
+{
+    if (N == 1)  return N;
+    else return N + NaturalNumbers (N + 1);
+}
+Console.WriteLine(NaturalNumbers(10)); */
