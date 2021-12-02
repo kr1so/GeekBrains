@@ -61,7 +61,7 @@ else s = "день задан неверно"
 Console.WriteLine(s);*/
 
 
- //4. Найти максимальное из трех чисел
+//4. Найти максимальное из трех чисел
 /*
 int number1=1;
 int number2=2;
@@ -79,15 +79,15 @@ return a*a*a;
  int c = y(2)
  Console.WriteLine(c);*/
 
- //6. Выяснить является ли число чётным
- /*int number = 201;
- if(number % 2 == 0)
+//6. Выяснить является ли число чётным
+/*int number = 201;
+if(number % 2 == 0)
 {
-  Console.WriteLine("четное");
+ Console.WriteLine("четное");
 }
 else
 {
-    Console.WriteLine("не четное");
+   Console.WriteLine("не четное");
 }*/
 
 //7. Показать числа от -N до N
@@ -130,17 +130,17 @@ EvenNumber(20); */
 // можно также сделать через едсятки - я пока не думала как
 
 // 1-ый способ
- /*int number= 213;
- string text = Convert.ToString(number);
- Console.WriteLine (text[2]);*/
+/*int number= 213;
+string text = Convert.ToString(number);
+Console.WriteLine (text[2]);*/
 
- // 2-ой способ.
- /* void LastNumber (int number)
-    {
-    string text = Convert.ToString(number);
-    Console.WriteLine (text[2]);
-    }
- LastNumber(247); */
+// 2-ой способ.
+/* void LastNumber (int number)
+   {
+   string text = Convert.ToString(number);
+   Console.WriteLine (text[2]);
+   }
+LastNumber(247); */
 
 //10. Показать вторую цифру трёхзначного числа
 
@@ -149,7 +149,7 @@ EvenNumber(20); */
  string text = Convert.ToString(number);
  Console.WriteLine (text[1]);*/
 
- // 2-ой способ
+// 2-ой способ
 /* void LastNumber (int number)
     {
     string text = Convert.ToString(number);
@@ -296,9 +296,9 @@ System.Console.WriteLine(Method1(a, b));*/
     }
  System.Console.WriteLine(LastNumber(2345)); */
 
- //16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным
-string Days (int day)
-{   
+//16. Дано число обозначающее день недели. Выяснить является номер дня недели выходным
+/* string Days (int day)
+{
     string DayOfWeek = string.Empty;
     string nullResult = "Введи число от 1 до 7, чтобы узнать, является ли оно выходным днём";
     if (day == 1) DayOfWeek = $"Вы ввели число {day} - это понедельник. Это не выходной день"; 
@@ -311,7 +311,89 @@ string Days (int day)
     if (day < 1 || day > 7) return nullResult;
     return DayOfWeek;
 }
-System.Console.WriteLine(Days(6));
+System.Console.WriteLine(Days(6));  */
+
+// Метод со считыванием числа от пользователя. 
+/* string Days ()
+{
+    System.Console.WriteLine("Введи число от 1 до 7, чтобы узнать, является ли оно выходным днём");
+    int day = Convert.ToInt32(Console.ReadLine());
+    string DayOfWeek = string.Empty;
+    string nullResult = "Введи число от 1 до 7, чтобы узнать, является ли оно выходным днём";
+    if (day == 1) System.Console.WriteLine($"Вы ввели число {day} - это понедельник. Это не выходной день"); 
+    if (day == 2) System.Console.WriteLine($"Вы ввели число {day} - это вторник. Это не выходной день"); 
+    if (day == 3) System.Console.WriteLine($"Вы ввели число {day} - это среда. Это не выходной день"); 
+    if (day == 4) System.Console.WriteLine( $"Вы ввели число {day} - это четверг. Это не выходной день"); 
+    if (day == 5) System.Console.WriteLine( $"Вы ввели число {day} - это пятница. Это не выходной день"); 
+    if (day == 6) System.Console.WriteLine($"Вы ввели число {day} - это суббота. Это выходной день"); 
+    if (day == 7) System.Console.WriteLine($"Вы ввели число {day} - это воскресенье. Это выходной день"); 
+    if (day < 1 || day > 7) return nullResult;
+    return DayOfWeek;
+}
+Days(); */
+// 17. По двум заданным числам проверять является ли одно квадратом другого.
+/* string SquadFunction(int number1, int number2)
+{
+    int squad1 = number1 * number1;
+    int squad2 = number2 * number2;
+    string result1 = $" Число является квадратом другого числа";
+    string result2 = $"Число является не квадратом другого числа";
+    if (squad1 == number2) return result1;
+    if (squad2 == number1) return result1;
+    else return result2;
+}
+System.Console.WriteLine(SquadFunction(4, 2)); */
+
+//18. Проверить истинность утверждения ¬(X ⋁ Y) = ¬X ⋀ ¬Y
+
+// Стихийный способ. 
+// f - false, t - true
+// x y result
+// ----------- result = решение для дизъюнкции
+// f f f
+// f t t
+// t t t
+// t f t
+/* bool
+x = false, y = false;
+System.Console.WriteLine(!(x || y) == (!x && !y));
+x = false; y = true;
+System.Console.WriteLine(!(x || y) == (!x && !y));
+x = true; y = true;
+System.Console.WriteLine(!(x || y) == (!x && !y));
+x = true; y = false;
+System.Console.WriteLine(!(x || y) == (!x && !y)); */
+// Методом. 
+/* bool Logical(bool x, bool y)
+{
+    return (!(x || y) == (!x && !y));
+}
+System.Console.WriteLine(Logical(false, false)); 
+System.Console.WriteLine(Logical(false, true)); 
+System.Console.WriteLine(Logical(true, true)); 
+System.Console.WriteLine(Logical(true, false));  */
+// С преобразованием из числа в булевое значение
+/* bool Logical(bool x, bool y)
+{
+    return (!(x || y) == (!x && !y));
+}
+bool ConvertIntToBool(int arg)
+{
+    return arg == 1;
+}
+//System.Console.WriteLine(ConvertIntToBool(0));
+//System.Console.WriteLine(ConvertIntToBool(1));
+bool res = true;
+for (int i = 0; i <= 1; i++)
+{
+    for (int j = 0; j <= 1; j++)
+    {
+        // За счет конъюнкции идет умножение каждого из значений и находится true/false выражения
+        res = res && Logical(ConvertIntToBool(i), ConvertIntToBool(j));
+    }
+}
+System.Console.WriteLine(res); */
+19. Определить номер четверти плоскости, в которой находится точка с координатами Х и У, причем X ≠ 0 и Y ≠ 0
 
 //24. Найти кубы чисел от 1 до N
 
