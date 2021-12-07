@@ -70,35 +70,39 @@ System.Console.WriteLine(NaturalNumbers(10, 20));   */
 }
  System.Console.WriteLine(SumOfNumbers(5, 7)); 
  */
+
 // 70. Найти сумму цифр числа 
-/* 
- int SumOfNumbers(int a)
+
+/* int SumOfNumbers(int a)
 {
-    int sum = a%10;
-    int sum2 = a/10;
-    return ( a % 10 == 0) ? a : SumOfNumbers(sum2)+sum;
+    return ( a / 10 == 0) ? a : SumOfNumbers(a/10)+SumOfNumbers(a%10);
 }
- System.Console.WriteLine(SumOfNumbers(1136)); */
+ System.Console.WriteLine(SumOfNumbers(1488)); */
 
 // 71. Функция Аккермана.
 
-int FunctionAckerman(int m, int n)
+/* int FunctionAckerman(int m, int n)
 {
     if (m == 0) return n+1;
     if (m > 0 && n == 0) return FunctionAckerman(m - 1, 1);
     if (m > 0 && n > 0) return FunctionAckerman(m - 1, FunctionAckerman(m, n - 1));
     return 0;
 }
-System.Console.WriteLine(FunctionAckerman(3,4));
+System.Console.WriteLine(FunctionAckerman(3,4)); */
 
 // 72. Написать программу возведения числа А в целую стень B
-//Возведение в степень - умножение числа само на себя
-
+/// TO DO
+int DegreeNumber(int a)
+{
+    int count = 2;
+    return ( a * a == 0||a * a == 1) ? a : DegreeNumber(a^count);
+}
+ System.Console.WriteLine(DegreeNumber(6));
 /* 73. Написать программу показывающие первые N чисел, для которых каждое следующее равно сумме двух предыдущих. 
 Первые два элемента последовательности задаются пользователем */
 
 // Метод для ввода чисел от пользователя. 
-/* string EnterToProgram()
+/*  string EnterToProgram()
 {
     System.Console.WriteLine("Введите первое число");
     int N = Convert.ToInt32(Console.ReadLine());
@@ -108,8 +112,6 @@ System.Console.WriteLine(FunctionAckerman(3,4));
     return result;
 } */
 //System.Console.WriteLine(EnterToProgram());
-
-
 /// TO DO
 // Метод для вычисления сложения.
 /* double  Summary(int N, int M)
