@@ -142,7 +142,7 @@ for (int i = 1; i < 40; i++)
 {
     System.Console.WriteLine($"{i}! = {Factorial(i)}");
 } */
-/* Console.Clear();
+/*  Console.Clear();
 System.Console.WriteLine("Числа Фибоначчи");
 //f(1)=1
 //f(2)=1
@@ -155,4 +155,4 @@ double Fibonacci (int N)
 for (int i = 1; i < 100; i++)
 {
     System.Console.WriteLine($"{i} = {Fibonacci(i)}");
-} */
+}  */
