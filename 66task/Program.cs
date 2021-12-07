@@ -82,19 +82,14 @@ System.Console.WriteLine(NaturalNumbers(10, 20));   */
 
 // 71. Функция Аккермана.
 
-/*double A(int m, int n)
+int FunctionAckerman(int m, int n)
 {
-
-    //double result1 = Convert.ToDouble(n+1);
-    //double result2 = Convert.ToDouble(A(m - 1, 1));
-    //double result3 = Convert.ToDouble(A(m - 1, A(m, n - 1)));
-
-    if (m == 0) return Convert.ToDouble(n+1);
-    if (m > 0 && n == 0) return Convert.ToDouble(A(m - 1, 1));;
-    if (m > 0 && n > 0) return Convert.ToDouble(A(m - 1, A(m, n - 1)));
+    if (m == 0) return n+1;
+    if (m > 0 && n == 0) return FunctionAckerman(m - 1, 1);
+    if (m > 0 && n > 0) return FunctionAckerman(m - 1, FunctionAckerman(m, n - 1));
     return 0;
 }
-System.Console.WriteLine(A(4,0));  */
+System.Console.WriteLine(FunctionAckerman(3,4));
 
 // 72. Написать программу возведения числа А в целую стень B
 //Возведение в степень - умножение числа само на себя
@@ -117,7 +112,7 @@ System.Console.WriteLine(A(4,0));  */
 
 /// TO DO
 // Метод для вычисления сложения.
-double  Summary(int N, int M)
+/* double  Summary(int N, int M)
 {
     int count = 5;
     if (N == 0 || N == 1 && M == 0 || M == 1 ) return 1;
@@ -129,7 +124,7 @@ double  Summary(int N, int M)
         string result = $"{i} число = {Summary(N, M)}";
         }
 }
-System.Console.WriteLine(Summary(2, 3)); 
+System.Console.WriteLine(Summary(2, 3));  */
 
 //1. Задача от Сергея.
 // пустая подпоследовательность - тоже является последовательностью
