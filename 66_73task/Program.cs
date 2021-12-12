@@ -107,7 +107,7 @@ System.Console.WriteLine(FunctionAckerman(3,4)); */
 
 // 72. Написать программу возведения числа А в целую стень B
 
-/* int b = 10;
+/*  int b = 10;
 int a = 7;
 double DegreeNumber(int a, int b)
 {
@@ -119,7 +119,7 @@ double DegreeNumber(int a, int b)
 for (int i = 0; i <= b; i++)
     {
     System.Console.Write($"{DegreeNumber(a, i)} ");
-    }  */
+    }   */
 // 73. Написать программу показывающие первые N чисел, для которых каждое следующее равно сумме двух предыдущих. 
 //Первые два элемента последовательности задаются пользователем 
 
