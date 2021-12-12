@@ -1,8 +1,9 @@
 ﻿//game init
-int GameInit(int lefta, int righta)
+/// TO DO
+/* int GameInit(int lefta, int righta)
     {
     int a = new Random().Next(lefta, righta);
-    return a;
+    return 0;
     }
 int MakeMove(int MoveNumber, int SecretNumber)
     {
@@ -24,7 +25,7 @@ int MakeMove(int MoveNumber, int SecretNumber)
     return MoveNumber;
     }
 System.Console.WriteLine(GameInit(10,100));
-System.Console.WriteLine(MakeMove(7, 17));
+System.Console.WriteLine(MakeMove(7, 17)); */
 //запрос числа у игрока, обработка нештатных ситуаций.
 /* int RequestNumber(int lefta, int righta)
     {

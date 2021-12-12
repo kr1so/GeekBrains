@@ -18,7 +18,7 @@ Console.WriteLine("+");
 int x = xa, y = ya;
 
 int count = 0;
-while (count < 1000);
+while (count < 1000)
 {
      int what = new Random().Next(0,3); // 0,1,2;
      if (what == 0)
