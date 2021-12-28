@@ -1,35 +1,26 @@
-﻿
-//11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
-/* void Method1 (int min, int max)
-{
+﻿//11. Дано число из отрезка [10, 99]. Показать наибольшую цифру числа
+/* void Method1 (int min, int max){
     int[] arr = {min, max+1};
-    for (int i = 0; i <= arr.Length; i++)
-    {
+    for (int i = 0; i <= arr.Length; i++){
      System.Console.WriteLine($"{arr}");  
     }
 }
-/* int PrintNumber(int z)
-    {
+/* int PrintNumber(int z){
     int n = z/10;
     int m = z%10;
-        if (n>m) return n;
-        else return m;
+    if (n>m) return n;
+    else return m;
     }  
-
 Method1(10,99); */
-
-
-
 /* int x = 10;
 int y = 99;
 int z = new Random().Next(x, y+1);
 System.Console.WriteLine($"Число из отрезка {z}");
-int PrintNumber(int z)
-    {
+int PrintNumber(int z){
     int n = z/10;
     int m = z%10;
-        if (n>m) return n;
-        else return m;
+    if (n>m) return n;
+    else return m;
     } 
 System.Console.Write("Наибольшая цифра числа = ");
 Console.WriteLine(PrintNumber(z));*/
@@ -47,15 +38,11 @@ System.Console.Write(DelNum(number)); */
 //код от панды 
 /* int[] arr = new int[10];
 int count = 0;
-for (int i =0;i <arr.Length;i++)
-{
+for (int i =0;i <arr.Length;i++){
     arr[i]=Convert.ToInt32(Console.ReadLine());
-
 }
-for (int i =0;i <arr.Length;i++)
-{
-    if (arr[i] > 0)
-    {
+for (int i =0;i <arr.Length;i++){
+    if (arr[i] > 0){
         count++;
     }
 }
@@ -65,56 +52,40 @@ string numbers = Console.ReadLine();
 string[] num = numbers.Split(' ');
 // затем сконвертировать из строки в число и сравнить положительные, отрицательные, нулевые задачи */
 
-
 //14.Выяснить, кратно ли число заданному, если нет, вывести остаток. 
 //доделать задачу, здесь 2 варианта, первый - доработать
 /*int a = 110;
 int b = 60;
 
-string Method1(int a, int b)
-{
+string Method1(int a, int b){
     string text = string.Empty;
-
-    if (a > b)
-    {
-        if (a % b == 0)
-        {
+    if (a > b){
+        if (a % b == 0){
             text = "кратно";
         }
-        else
-        {
+        else{
             int c = a % b;
             text = $"{c}";
         }
     }
-    else
-    {
+    else{
         text = "неверно заданы числа";
     }
     return text;
-
 }
 System.Console.WriteLine(Method1(a, b));*/
-
-
-
 /* 
-    void Method1(int a, int b)
-    {
-        if (a>b)
-        {
-            if (a%b == 0)
-            {   
+    void Method1(int a, int b){
+        if (a>b){
+            if (a%b == 0){   
             System.Console.WriteLine("кратно");
             }
-            else
-            {
+            else{
             int c = a%b;
             System.Console.WriteLine(c);
             }
         }
-        else
-        {
+        else{
              System.Console.WriteLine("неверно заданы числа");
         }
     }
